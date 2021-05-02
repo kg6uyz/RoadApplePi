@@ -22,12 +22,19 @@ then
 	exit
 fi
 
+######################
+# Add PHP Repository #
+######################
+echo -e "\e[1;4;93mStep 0. Adding PHP Repository\e[0m"
+wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
+echo "deb https://packages.sury.org/php/ buster main" | sudo tee /etc/apt/sources.list.d/php7.list
+
 #################
 # Update System #
 #################
 echo -e "\e[1;4;93mStep 1. Updating system\e[0m"
 sudo apt update
-sudo apt upgrade -y
+sudo apt upgrade - y
 
 ###########################################
 # Install pre-built dependencies from Apt #
