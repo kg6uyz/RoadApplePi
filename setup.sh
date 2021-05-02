@@ -34,7 +34,7 @@ echo "deb https://packages.sury.org/php/ buster main" | sudo tee /etc/apt/source
 #################
 echo -e "\e[1;4;93mStep 1. Updating system\e[0m"
 sudo apt update
-sudo apt upgrade - y
+sudo apt upgrade -y
 
 ###########################################
 # Install pre-built dependencies from Apt #
